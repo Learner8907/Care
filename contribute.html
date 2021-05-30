@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Job Roles</title>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body style="background-color: #cdb4db">
+<div class="container">
+	<button id="logout" class="btn btn-info" onclick="home()"><i class="fa fa-home"></i> &nbsp HOME PAGE</button>
+	<center>
+		<h1 class="header">	
+			Enter Job Openings
+			<sup>
+				<img style="border-radius: 100%; width: 100px" src="people-with-disabilities-jobs.jpg">
+			</sup>
+		</h1>
+<label> Select type of disability</label>
+<br>
+<!-- Traditional way of making dropdown-->
+<div class="custom-select">
+       <select id="dropdown" >
+            <option value="0">Blind</option>
+            <option value="1">Deaf and Dumb</option>
+            <option value="2">Physically disabled</option>
+        </select>
+        </div>
+<br>
+<br>
+<button onclick="add_job()" class="btn btn-success"> ADD JOB </button>
+        <!-- Better looking-->
+
+        
+
+		<h3 class="color_white" id="welcome"></h3>
+		<div class="form-group input_div_room_page" id="job_desc">
+			<label>PLEASE ADD JOB DESCRIPTON ALONG WITH CONTACT DETAILS:</label>
+<textarea style="height: 200px;" type="text" class="form-control" placeholder="ADD JOB DESCRIPTION" id="job">   </textarea>
+		</div>
+		<br>
+		<br>
+		<button class="btn btn-success" id="confirm" onclick="confirm()">CONFIRM</button>
+	
+	</center>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
